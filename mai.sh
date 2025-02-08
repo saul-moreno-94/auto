@@ -6,6 +6,24 @@ RED='\033[0;31m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # Sin color
 
+# Mostrar banner
+function show_banner() {
+    echo -e "${GREEN}"
+    echo "███╗   ██╗ █████╗ ██╗   ██╗ █████╗ ██████╗ "
+    echo "████╗  ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗"
+    echo "██╔██╗ ██║███████║ ╚████╔╝ ███████║██████╔╝"
+    echo "██║╚██╗██║██╔══██║  ╚██╔╝  ██╔══██║██╔══██╗"
+    echo "██║ ╚████║██║  ██║   ██║   ██║  ██║██║  ██║"
+    echo "╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝"
+    echo "████████╗ ██████╗  ██████╗ ██╗     ███████╗"
+    echo "╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝"
+    echo "   ██║   ██║   ██║██║   ██║██║     ███████╗"
+    echo "   ██║   ██║   ██║██║   ██║██║     ╚════██║"
+    echo "   ██║   ╚██████╔╝╚██████╔╝███████╗███████║"
+    echo "   ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝"
+    echo -e "${NC}"
+}
+
 # Función para mostrar información del sistema
 function system_info() {
     echo -e "${GREEN}### Información del sistema ###${NC}"
@@ -54,6 +72,7 @@ function services_info() {
 # Función principal para el menú
 function main_menu() {
     while true; do
+        show_banner
         echo -e "\n${YELLOW}--- Menú de Información del Sistema ---${NC}"
         echo "1) Información del sistema"
         echo "2) CPU"
